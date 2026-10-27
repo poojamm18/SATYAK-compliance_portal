@@ -1,0 +1,1021 @@
+# SATYAK — Complete Full-Stack AICTE Application Validation & Compliance Platform
+
+## ROLE AND OBJECTIVE
+
+Act as a senior full-stack engineer, product designer, UX architect and AI application developer.
+
+Build a complete, polished, responsive, functional web application named **SATYAK** for the problem statement:
+
+**AI-Powered Application Validation, Document Authentication and Regulatory Compliance Verification for AICTE.**
+
+The application must help technical institutions prepare approval-related applications and help authorized reviewers identify missing documents, expired certificates, inconsistent information, potential document anomalies and regulatory compliance gaps.
+
+This is a hackathon prototype intended to demonstrate a practical solution to AICTE's application validation problem.
+
+Do not build only a landing page or static UI. Build a complete, interactive, end-to-end application with a functional frontend, validation logic, document-upload workflow, results dashboard, institution workspace, officer review workspace, verification simulator, compliance guide and audit trail.
+
+Prioritize a working implementation that can be generated, tested and demonstrated today.
+
+Do not ask unnecessary questions. Make sensible implementation decisions and begin building the application.
+
+---
+
+# 1. PRODUCT IDENTITY AND BRANDING
+
+Product name: **SATYAK**
+
+Full form: **Smart Application Tracking, Authentication & Knowledge System**
+
+Tagline: **"Every document verified. Every discrepancy explained."**
+
+Product description: An AI-powered application validation, document authentication and regulatory compliance assistance platform designed for AICTE-related approval workflows.
+
+The product name SATYAK must appear consistently throughout the website, browser title, header, dashboard, mobile navigation, login screens, reports, favicon where supported, loading states, empty states and footer.
+
+Do not use the name SmartVerify anywhere in the new application.
+
+### Branding rules
+
+- Create a custom, professional emblem combining the ideas of a shield, verified document and institutional trust.
+- Use the wordmark SATYAK beside the emblem.
+- Display the subtitle "Application Validation & Compliance Assistance" where appropriate.
+- Display a small but visible label: "Prototype • Demo Environment".
+- Use a restrained, government-inspired visual language without impersonating an official government website.
+- Do not use an unauthorized official AICTE logo or falsely imply government endorsement.
+- Do not fabricate official AICTE contact details, integrations, approvals or regulatory endorsements.
+
+Use the following color palette:
+
+- Primary navy: #142B4A
+- Secondary navy: #203C5B
+- Teal accent: #087F8C
+- Light teal: #E6F4F3
+- Background: #F2F5F9
+- White: #FFFFFF
+- Primary text: #172B42
+- Secondary text: #637287
+- Borders: #DCE4ED
+- Success: #16805D
+- Warning: #B7791F
+- Error: #C43D4B
+
+Use Inter or a similar clean sans-serif font.
+
+The overall aesthetic must feel like a credible public-service portal combined with a modern enterprise compliance product.
+
+Avoid generic AI landing pages, excessive gradients, glassmorphism, oversized rounded cards, unnecessary animations, excessive empty space and decorative elements that do not serve a purpose.
+
+---
+
+# 2. RESPONSIVE DESIGN IS MANDATORY
+
+Build the entire application mobile-first. Do not design only for desktop and shrink it later.
+
+Support these viewport widths:
+
+- 320–374px: small phones
+- 375–430px: standard phones
+- 431–767px: large phones and small tablets
+- 768–1023px: tablets
+- 1024–1439px: laptops
+- 1440px and above: large desktop displays
+
+Use React, TypeScript and a responsive styling system such as Tailwind CSS.
+
+Use CSS Grid, Flexbox, fluid typography, `clamp()`, responsive breakpoints and flexible container widths. Avoid fixed-width layouts that cause horizontal scrolling.
+
+### Desktop behavior
+
+- Horizontal institutional navigation.
+- Spacious two-column hero.
+- Responsive service cards.
+- Sidebar-based dashboards where appropriate.
+- Tables with filters, search and sorting.
+- Side-by-side evidence and finding panels where space permits.
+- Clear visual hierarchy and consistent alignment.
+
+### Mobile behavior
+
+- Compact SATYAK header with logo on the left and a functional menu button on the right.
+- Navigation drawer or dropdown with all important destinations.
+- Stack hero content vertically.
+- Make primary actions easy to tap.
+- Convert multi-column layouts into single-column or compact two-column layouts where appropriate.
+- Convert horizontal timelines into vertical timelines.
+- Replace wide dashboard tables with readable application cards or responsive tables.
+- Stack filters and form fields vertically.
+- Make upload controls usable with the native mobile file picker.
+- Keep validation findings, evidence and corrective actions readable.
+- Convert officer review panels into stacked layouts or full-screen mobile panels.
+- Ensure dialogs and dropdowns never exceed the viewport.
+- Ensure all buttons have comfortable touch targets.
+- Avoid horizontal page scrolling at all supported sizes.
+
+### Required responsive testing
+
+Test these viewport sizes using available browser or preview tools:
+
+- 320 × 700
+- 375 × 812
+- 390 × 844
+- 768 × 1024
+- 1024 × 768
+- 1440 × 900
+
+Inspect the homepage, wizard, uploads, results, verification services, compliance guide, institution dashboard, officer workspace and audit history.
+
+Fix clipped content, overlapping elements, inaccessible menus, overflowing tables and broken mobile interactions. Do not claim to have tested a viewport unless you actually inspected it.
+
+---
+
+# 3. WEBSITE INFORMATION ARCHITECTURE
+
+Build a cohesive website with these primary destinations:
+
+1. Home
+2. Application Process
+3. Check Application Readiness
+4. Document Requirements
+5. Verification Services
+6. Compliance Guide
+7. Institution Dashboard
+8. Officer Workspace
+9. Help & FAQs
+
+Use a shared header, navigation system, footer, typography, colors and component library across all pages.
+
+Every navigation link must work. No decorative or dead buttons.
+
+For a prototype that does not have a configured authentication provider, implement clearly labeled demo access or role selection rather than pretending that real government authentication exists.
+
+Provide two demo experiences:
+
+- Institution User
+- Reviewing Officer
+
+Clearly label both as demonstration roles.
+
+---
+
+# 4. HOMEPAGE DESIGN
+
+Create a visually compelling homepage that explains the problem and solution to an ordinary person without requiring technical knowledge.
+
+## A. Header
+
+Desktop header:
+- SATYAK emblem and wordmark.
+- Navigation links.
+- "Institution Login" action.
+- "Officer Workspace" action.
+
+Mobile header:
+- SATYAK wordmark.
+- Menu toggle.
+- Functional navigation drawer.
+
+Keep the header compact, accessible and consistent across all routes.
+
+## B. Hero section
+
+Use a refined two-column layout on desktop and a stacked layout on mobile.
+
+Eyebrow:
+
+"APPLICATION VALIDATION & COMPLIANCE ASSISTANCE"
+
+Headline:
+
+**"Know what's missing before your application is reviewed."**
+
+Supporting text:
+
+"SATYAK helps institutions validate application details, check document completeness, identify inconsistencies and understand which items require further verification."
+
+Primary CTA: "Check Application Readiness"
+
+Secondary CTA: "Explore the Approval Process"
+
+Add a meaningful visual on the right side of the desktop hero. Show a stylized application summary, a document verification panel and a small set of status indicators. Do not use generic robot illustrations or an unnecessary chatbot graphic.
+
+Display a clear note:
+
+"Independent prototype using synthetic demonstration data. Not an official AICTE portal."
+
+## C. Service cards
+
+Create four functional cards:
+
+### Application Validation
+Identify missing fields, incomplete submissions, expired documents and inconsistent records.
+
+CTA: "Validate an Application"
+
+### Document Verification
+Check document references against configured demonstration records and show verification status.
+
+CTA: "Explore Verification"
+
+### Compliance Assistance
+Review configurable requirements relevant to the selected application category.
+
+CTA: "View Requirements"
+
+### Review & Audit Trail
+Understand findings, reviewer observations and the actions recorded for each case.
+
+CTA: "Open Review Workspace"
+
+Each card must navigate to the appropriate working page.
+
+## D. How SATYAK Works
+
+Show a clear five-step process:
+
+1. Select an application category.
+2. Enter institutional information and add supporting documents.
+3. Run document completeness and consistency checks.
+4. Review findings and supporting evidence.
+5. Resolve deficiencies or route cases for authorized review.
+
+Use a horizontal process diagram on desktop and a vertical stepper on mobile.
+
+## E. What SATYAK Checks
+
+Present the main capabilities:
+
+- Missing and incomplete documents.
+- Expired certificates and permissions.
+- Inconsistent institutional information.
+- Duplicate files.
+- Suspicious document anomalies.
+- Verification through supported issuer mechanisms.
+- Configurable regulatory checklists.
+- Infrastructure evidence requiring further review.
+- Cases requiring additional evidence or physical inspection.
+
+## F. Trust and transparency
+
+Include three short principles:
+
+- Evidence-linked findings.
+- Traceable verification and reviewer actions.
+- Human review before adverse regulatory decisions.
+
+## G. Footer
+
+Include:
+- About SATYAK
+- Application Process
+- Document Requirements
+- Verification Services
+- Compliance Guide
+- Help & FAQs
+- Privacy & Security
+- Prototype Disclaimer
+
+Do not fabricate official contact information or links.
+
+---
+
+# 5. APPLICATION READINESS WIZARD
+
+This is the core user workflow and must function end to end.
+
+Create a multi-step wizard with a progress indicator, clear instructions, field validation and responsive layouts.
+
+## Step 1: Select application category
+
+Provide the following prototype categories:
+
+- Extension of Approval (EoA)
+- New Institution Approval
+- Change in Approved Intake
+- Addition or Change of Programme
+- Other Approval-Related Change
+
+Changing the category must update the configurable demonstration checklist.
+
+Clearly state that the exact checklist depends on the applicable rules and must be verified against the current authorized AICTE requirements.
+
+## Step 2: Institution details
+
+Provide these fields:
+
+- Institution name
+- Institution code or identifier
+- State
+- Application reference number
+- Academic year
+- Application category
+- Application date
+
+Validate mandatory fields and provide understandable inline error messages.
+
+Use realistic synthetic examples rather than real institution or personal data.
+
+## Step 3: Document upload
+
+Support PDF, PNG and JPEG uploads within configurable file-size limits.
+
+Provide a document-type selector with:
+
+- Affidavit or Undertaking
+- Accreditation or Certification
+- NOC or Permission
+- Faculty-Related Evidence
+- Infrastructure Certificate
+- Institutional Records
+- Previous Approval or EoA
+- Other Supporting Document
+
+For each upload, show:
+
+- File name
+- File type
+- File size
+- Selected document category
+- Upload status
+- Remove action
+- Extracted text or manually entered metadata, when available
+
+Support drag-and-drop on desktop and the native file picker on mobile.
+
+Validate file type and size on the server when a backend is configured, as well as in the interface.
+
+Do not claim that a file has been authenticated just because it was successfully uploaded.
+
+## Step 4: Review
+
+Display the entered information and document inventory before validation.
+
+Allow the user to go back and correct details.
+
+## Step 5: Run validation
+
+Run the actual validation engine against the application data and documents.
+
+Show a loading state and then generate a detailed results report.
+
+All results must be derived from the actual input and configured rules. Do not generate random findings.
+
+Provide a restart action and a way to open the saved application later.
+
+---
+
+# 6. DOCUMENT EXTRACTION AND VALIDATION ENGINE
+
+Implement deterministic, reusable validation logic in a dedicated module.
+
+Do not make the core functionality dependent on paid AI APIs.
+
+## A. Required-field validation
+
+Check whether required application fields are missing or invalid.
+
+## B. Document completeness
+
+Compare the uploaded document categories against the checklist configured for the selected application category.
+
+Identify:
+- Required documents that are missing.
+- Documents with incomplete metadata.
+- Documents uploaded under an incompatible category.
+- Items that cannot be evaluated with the available information.
+
+## C. Expiry validation
+
+When a document has a known expiry date, compare it with the selected application date or a clearly defined reference date.
+
+Distinguish:
+- Valid on the reference date.
+- Expiring soon.
+- Expired.
+- Expiry date unavailable.
+
+Do not invent expiry dates or silently assume a certificate is valid when its dates cannot be established.
+
+## D. Cross-document consistency
+
+Where information is available, compare:
+
+- Institution name.
+- Institution code.
+- Certificate number.
+- Issue date.
+- Expiry date.
+- Application reference.
+- Programme and intake information.
+
+Flag mismatches with both observed and expected values when the expected value has a reliable source.
+
+Do not assume that every document contains every field.
+
+## E. Duplicate-file detection
+
+Calculate SHA-256 hashes for uploaded files where supported.
+
+Identify exact duplicate files and display the names of the matching documents.
+
+Keep duplicate detection separate from conclusions about document authenticity.
+
+## F. Document anomaly indicators
+
+Create explainable, deterministic checks for:
+
+- Conflicting dates.
+- Mismatched identifiers.
+- Inconsistent values across records.
+- Suspicious duplicate submissions.
+- Missing expected metadata.
+- Other demonstrable anomalies.
+
+If actual document-forgery detection is not implemented, explicitly describe this module as preliminary anomaly screening.
+
+Do not claim to detect sophisticated document manipulation reliably through simple metadata heuristics.
+
+## G. OCR and text extraction
+
+Use an available, compatible library for PDF text extraction where feasible.
+
+For scanned documents or images, implement actual OCR only if a compatible local or free implementation is practical in the current environment.
+
+If extraction is unavailable or fails:
+- Show "Text extraction unavailable" or "Extraction failed".
+- Allow manual metadata entry.
+- Offer a clearly labeled demonstration-extraction mode where appropriate.
+- Never display invented extracted text as though it came from the uploaded document.
+
+Keep extracted text, manually entered data and synthetic demo values clearly distinguishable.
+
+## H. Validation findings
+
+Each finding must contain:
+
+- Finding ID.
+- Check name.
+- Status.
+- Severity.
+- Description.
+- Reason for the finding.
+- Affected document or application field.
+- Supporting evidence.
+- Expected and observed values when applicable.
+- Recommended next action.
+- Human-review requirement.
+
+Use understandable status labels:
+
+- Passed
+- Attention Required
+- Action Required
+- Verification Pending
+- Manual Review Required
+
+Use severity levels such as Low, Medium and High.
+
+A high-severity flag must not automatically establish wrongdoing.
+
+---
+
+# 7. VALIDATION RESULTS REPORT
+
+Make this one of the most polished and useful screens in the application.
+
+Display:
+
+- Application reference.
+- Institution name.
+- Application category.
+- Validation timestamp.
+- Overall readiness indicator.
+- Total checks performed.
+- Passed checks.
+- Missing or incomplete items.
+- Expired documents.
+- Inconsistencies.
+- Verification-pending items.
+- Findings requiring human review.
+
+The readiness indicator must be calculated from the configured checks and must be explicitly described as an internal prototype measure, not an official AICTE score or approval probability.
+
+Do not calculate a misleading readiness score when insufficient information exists. In that case, show "Insufficient information to calculate readiness".
+
+## Findings interface
+
+Create a filterable findings table or responsive list with:
+
+- Finding.
+- Category.
+- Severity.
+- Status.
+- Evidence.
+- Recommended action.
+
+Allow filtering by status, severity and finding type.
+
+Selecting a finding must open a detail panel or mobile-friendly detail screen with:
+
+1. What was detected.
+2. Why it matters.
+3. The relevant application field or document.
+4. Expected versus observed values where available.
+5. Supporting evidence.
+6. Recommended corrective action.
+7. Verification source and timestamp where available.
+8. Whether human review is required.
+
+## Downloadable report
+
+Implement a working "Download Validation Report" action.
+
+Generate a downloadable PDF or another suitable report format supported by the environment.
+
+The report must include:
+- SATYAK branding.
+- Application details.
+- Validation date.
+- Checks performed.
+- Findings and statuses.
+- Evidence references.
+- Recommended next actions.
+- Prototype disclaimer.
+
+Do not create a fake download button.
+
+---
+
+# 8. INSTITUTION DASHBOARD
+
+Create an institution-facing dashboard with a clear summary of its demonstration applications.
+
+Include:
+- Recent applications.
+- Application references.
+- Application categories.
+- Readiness statuses.
+- Missing documents.
+- Verification progress.
+- Outstanding actions.
+- Last-updated timestamps.
+
+Provide search, filtering and sorting.
+
+Allow a user to:
+- Open an application.
+- Review findings.
+- View document details.
+- Understand what needs to be corrected.
+- Add or replace a document.
+- Rerun validation.
+- View application history.
+
+Persist the application state when possible.
+
+Make the interface responsive and use compact application cards on narrow screens.
+
+---
+
+# 9. OFFICER REVIEW WORKSPACE
+
+Create a separate officer-facing review interface. This is an important differentiator and must not be reduced to a static dashboard.
+
+## Overview
+
+Display summary cards for:
+
+- Total demonstration applications.
+- Awaiting review.
+- Deficiencies identified.
+- Verification pending.
+- Cases requiring additional evidence.
+- Cases flagged for possible inspection.
+
+All numbers must be calculated from the current demo data.
+
+## Application queue
+
+Create a searchable and filterable application queue with:
+- Application reference.
+- Institution.
+- Category.
+- Current status.
+- Findings count.
+- Highest severity.
+- Last updated.
+
+Use realistic synthetic cases.
+
+## Case review
+
+When a reviewer opens a case, show:
+
+- Institutional details.
+- Application information.
+- Document inventory.
+- Validation findings.
+- Issuer-verification results.
+- Compliance checklist results.
+- Reviewer notes.
+- Audit timeline.
+
+Where supported, display a document preview beside its findings on desktop and in a stacked view on mobile.
+
+## Reviewer actions
+
+Implement functional actions:
+
+- Record Observation.
+- Request Additional Evidence.
+- Mark for Manual Verification.
+- Refer for Inspection.
+- Mark Review Completed.
+
+Require an appropriate note or reason for important actions.
+
+Update the case state and append an audit event whenever an action is taken.
+
+"Review Completed" must mean only that the demonstration review workflow has been completed. It must never mean that an official approval was granted.
+
+Provide a way to reverse or correct a reviewer action through a new auditable event rather than silently deleting the historical record.
+
+---
+
+# 10. ISSUER VERIFICATION SERVICES
+
+Create a dedicated Verification Services page.
+
+Explain the potential verification methods:
+
+- Authorized APIs.
+- Official issuer portals.
+- Digitally signed documents.
+- QR codes.
+- Digital repositories.
+- Unique document reference numbers.
+- Manual issuer confirmation.
+
+## Synthetic verification registry
+
+Create a small, clearly labeled demonstration registry containing synthetic issuer records.
+
+Allow the user to enter:
+- Issuer type.
+- Document reference number.
+- Institution identifier or certificate identifier where applicable.
+
+Run deterministic comparisons against the synthetic registry.
+
+Display:
+- Source name.
+- Source type.
+- Whether it is a synthetic demonstration source.
+- Verification timestamp.
+- Submitted reference.
+- Returned record details.
+- Comparison result.
+- Next recommended action.
+
+Support these outcomes:
+
+- Verified Against Demo Record.
+- Mismatch Detected.
+- Expired.
+- Verification Pending.
+- Source Unavailable.
+- Manual Verification Required.
+
+Include examples of a match, mismatch, missing record and unavailable source.
+
+Never claim that a live official portal or issuing authority has been contacted unless a genuine, authorized integration has been implemented and tested.
+
+Do not scrape restricted portals, bypass authentication or fabricate official API responses.
+
+---
+
+# 11. COMPLIANCE GUIDE
+
+Create a searchable regulatory-assistance section organized by application category.
+
+Each requirement must include:
+
+- Requirement title.
+- Plain-language explanation.
+- Applicable category.
+- Evidence normally associated with the requirement.
+- Configurable validation rule.
+- Result when evaluated.
+- Regulatory source or reference, where verified.
+- Whether manual review is required.
+
+Include example categories relating to:
+- Institutional records.
+- Faculty.
+- Infrastructure.
+- Accreditation and certifications.
+- Permissions and NOCs.
+- Approved programmes and intake.
+- Previous approval history.
+- Payment and application status, where applicable.
+
+Treat these as configurable illustrative categories, not a definitive statement of current AICTE requirements.
+
+Do not invent statutory clauses, handbook section numbers or official eligibility requirements.
+
+Make it easy for an administrator to understand the requirements in plain language.
+
+Provide expandable requirement cards, search and category filters.
+
+---
+
+# 12. INFRASTRUCTURE COMPLIANCE ASSISTANCE
+
+Create a dedicated module that demonstrates how infrastructure evidence may be reviewed.
+
+Allow a user to associate synthetic evidence with configurable requirement categories, such as:
+- Classrooms.
+- Laboratories.
+- Library facilities.
+- Other institution-relevant infrastructure.
+
+Support uploaded photographs, floor plans, certificates and supporting evidence where feasible.
+
+For the first prototype, implement an evidence inventory and rule-based completeness review.
+
+If a compatible computer-vision model is genuinely available, it may be used for limited, clearly described visual observations. Otherwise, do not pretend that the system has measured room dimensions, counted equipment or verified real-world infrastructure.
+
+Allow reviewers to:
+- Mark evidence as sufficient for preliminary review.
+- Request additional evidence.
+- Flag an item for manual verification.
+- Refer a case for physical inspection.
+
+Clearly state that submitted photographs and documents cannot independently establish actual infrastructure compliance.
+
+---
+
+# 13. APPLICATION PROCESS PAGE
+
+Create a dedicated page explaining the approval-related workflow in plain language.
+
+Include:
+- Application preparation.
+- Category selection.
+- Supporting-document submission.
+- Automated preliminary validation.
+- Issuer verification where supported.
+- Human review.
+- Additional evidence or inspection where required.
+- Official decision by the competent authority.
+
+Explain which parts SATYAK assists with and which remain the responsibility of authorized officials.
+
+Do not present this illustrative workflow as a definitive description of every current AICTE procedure.
+
+Provide links to relevant internal SATYAK pages and a clear disclaimer that users should consult current official instructions for actual regulatory requirements.
+
+---
+
+# 14. HELP AND FAQS
+
+Create a searchable FAQ page with clear, nontechnical answers.
+
+Include questions such as:
+
+- What is SATYAK?
+- What is application readiness?
+- Why was a document flagged?
+- What does "verification pending" mean?
+- Does a failed check prove that a document is forged?
+- What should I do if a certificate has expired?
+- What happens when an issuer source is unavailable?
+- When is manual verification required?
+- Can SATYAK grant AICTE approval?
+- Is SATYAK connected to live AICTE records?
+- How is institutional information protected?
+
+Explain that automated checks are decision-support tools and that final regulatory decisions remain with competent authorities.
+
+Do not make a chatbot the central feature of the application.
+
+---
+
+# 15. AUDIT TRAIL
+
+Implement a structured audit timeline.
+
+Record relevant events such as:
+- Application created.
+- Application details changed.
+- Document added or replaced.
+- Validation started.
+- Validation completed.
+- Finding generated.
+- Issuer verification attempted.
+- Reviewer observation added.
+- Additional evidence requested.
+- Case referred for inspection.
+- Review state changed.
+
+Each event should include:
+- Event ID.
+- Application reference.
+- Event type.
+- Timestamp.
+- Actor or demonstration role.
+- Description.
+- Related finding or document where applicable.
+
+Display the timeline in chronological order.
+
+Do not silently rewrite past audit events. Corrections should be recorded as new events.
+
+For this prototype, clearly distinguish local demonstration logging from a production-grade tamper-resistant audit system.
+
+---
+
+# 16. DATA MODEL AND BACKEND
+
+Use a maintainable full-stack architecture.
+
+Preferred stack:
+- React.
+- TypeScript.
+- Tailwind CSS or an equivalent responsive styling system.
+- Reusable UI components.
+- A compatible Node.js backend or server routes where supported.
+- A structured data model for applications, documents, rules, findings, issuer records and audit events.
+
+Use a database only if it can be configured reliably within the available environment.
+
+If Firebase or another supported persistence service is available and can be configured without requiring paid access, it may be used. Otherwise, implement a working local demo mode using browser storage.
+
+Do not require paid API keys, billing activation or external credentials for the core workflow.
+
+Keep validation rules separate from UI components.
+
+Use appropriate validation for all inputs and uploaded files.
+
+Do not expose secrets in frontend code.
+
+Clearly document whether persistence is local to the browser, server-side or database-backed.
+
+Never store actual confidential institutional or personal documents for this demo. Use synthetic data.
+
+---
+
+# 17. SEEDED DEMONSTRATION DATA
+
+Create at least five coherent synthetic applications.
+
+### Case 1: Complete submission
+- All configured required documents are present.
+- No configured inconsistencies are detected.
+- Some checks may still require human review.
+- The application is not automatically approved.
+
+### Case 2: Missing documentation
+- One or more configured required documents are absent.
+- The results report identifies the missing documents and explains how to resolve the issue.
+
+### Case 3: Expired certificate
+- A synthetic certificate has an expiry date before the reference date.
+- The validation engine identifies it as expired and recommends obtaining valid evidence.
+
+### Case 4: Inconsistent institutional information
+- An institution identifier or date differs across two synthetic records.
+- The finding identifies the conflicting values and the source documents.
+
+### Case 5: Duplicate document and issuer mismatch
+- Two uploaded or seeded documents have matching file hashes where feasible.
+- A synthetic issuer record contains a conflicting identifier or document detail.
+- The case is flagged for further verification.
+
+Make every example internally consistent except for the specific issues intentionally introduced.
+
+The demonstration data must be reproducible and clearly marked as synthetic.
+
+---
+
+# 18. SECURITY AND PRIVACY
+
+Implement appropriate safeguards for a prototype:
+
+- Role-aware navigation and clearly labeled demo roles.
+- File-type and size validation.
+- Safe rendering of user-entered text.
+- No execution of uploaded files.
+- No secrets in frontend bundles.
+- No unrestricted external data fetching.
+- Clear user feedback for failed uploads and processing errors.
+- Explicit disclosure of local demo storage.
+- A way to clear demonstration data.
+
+Do not present a client-side role selector as real authentication or authorization.
+
+If real authentication is not configured, state that the application uses demonstration access.
+
+Do not use sensitive personal or institutional records in seeded examples.
+
+---
+
+# 19. USER EXPERIENCE AND INTERACTION QUALITY
+
+Every major button must perform its advertised action.
+
+Every navigation destination must load correctly.
+
+Implement:
+- Working search.
+- Working filters.
+- Working sorting where displayed.
+- Working forms and field validation.
+- Working document uploads and removal.
+- Working validation runs.
+- Working results detail panels.
+- Working demo issuer verification.
+- Working reviewer actions.
+- Working audit updates.
+- Working report download.
+- Working demo reset.
+- Appropriate loading, success, error and empty states.
+
+Use accessible form labels, keyboard navigation, visible focus indicators and readable color contrast.
+
+Respect reduced-motion preferences.
+
+Do not add decorative charts, meaningless percentages, fabricated performance metrics or simulated AI activity that is presented as genuine.
+
+If an advanced feature cannot be implemented reliably, provide a clearly labeled, functional fallback instead of a fake implementation.
+
+---
+
+# 20. IMPLEMENTATION PRIORITIES
+
+Build the application in this order:
+
+Priority 1:
+- SATYAK design system and shared navigation.
+- Responsive homepage.
+- Application wizard.
+- Document inventory and upload.
+- Deterministic validation engine.
+- Results report with evidence-linked findings.
+
+Priority 2:
+- Institution dashboard.
+- Officer review queue.
+- Case detail and reviewer actions.
+- Audit trail.
+
+Priority 3:
+- Issuer verification simulator.
+- Compliance guide.
+- Infrastructure evidence inventory.
+- FAQ and application process pages.
+
+Priority 4:
+- Visual refinements.
+- Mobile and tablet testing.
+- Downloadable report improvements.
+- Error handling and final QA.
+
+Do not sacrifice the core validation workflow to build many incomplete pages.
+
+---
+
+# 21. FINAL QUALITY ASSURANCE
+
+Before declaring the application complete:
+
+1. Run the app and resolve compilation and runtime errors.
+2. Check every main navigation destination.
+3. Complete a successful application validation.
+4. Complete at least two validation runs that produce different deficiencies.
+5. Test missing-document detection.
+6. Test expiry validation.
+7. Test cross-record mismatch detection.
+8. Test duplicate detection where supported.
+9. Test a synthetic issuer match and mismatch.
+10. Record an officer observation and verify that the audit timeline updates.
+11. Test document removal and revalidation.
+12. Test report download.
+13. Test demo data reset.
+14. Inspect all major screens at the specified mobile, tablet and desktop widths.
+15. Fix broken layouts and interactions.
+16. Confirm that synthetic records and demonstration integrations are labeled accurately.
+17. Confirm that the website does not falsely claim official AICTE approval or live data access.
+
+Do not merely describe the code you would write. Create the actual application files and implement the functionality.
+
+If the entire application cannot be completed in one generation, prioritize the functional core and finish the most important workflow before expanding secondary pages.
+
+## FINAL PRODUCT STANDARD
+
+The result must be a coherent, responsive, professional application named SATYAK.
+
+A normal institution administrator should understand what the platform does within a few seconds. A hackathon evaluator should be able to complete a validation workflow, inspect evidence-linked discrepancies, simulate issuer verification and review an application's audit history without needing an explanation of every screen.
+
+The final demonstration must communicate one clear idea:
+
+**SATYAK identifies what needs attention, explains why, links findings to evidence and helps authorized officials make informed decisions—without replacing human regulatory judgment.**

@@ -1,0 +1,6 @@
+{
+  "name": "SATYAK — AICTE Application Validation & Compliance",
+  "description": "Smart Application Tracking, Authentication & Knowledge System for AICTE approval workflows: document authentication, validation engine, compliance assistance, and audit trail.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
